@@ -14,10 +14,58 @@ app.get('/', (req, res) => {
 })
 
 app.post('/users', async(req, res) => {
-    const {name, email, description} = req.body
+    const {
+        nickname,
+        characname,
+        classe,
+        hp,
+        description,
+        iniciativa,
+        defesa,
+        agilidade,
+        blefe,
+        conhecimento,
+        cura,
+        forca,
+        furtividade,
+        inteligencia,
+        labia,
+        manejo,
+        preparacao,
+        performace,
+        pontaria,
+        resistencia,
+        sobrevivencia,
+        animais,
+        vontade,
+    } = req.body
 
     try{
-        const user = await User.create({name, email, description})
+        const user = await User.create({
+            nickname,
+            characname,
+            classe,
+            hp,
+            description,
+            iniciativa,
+            defesa,
+            agilidade,
+            blefe,
+            conhecimento,
+            cura,
+            forca,
+            furtividade,
+            inteligencia,
+            labia,
+            manejo,
+            preparacao,
+            performace,
+            pontaria,
+            resistencia,
+            sobrevivencia,
+            animais,
+            vontade,
+        })
 
         return res.json(user)
     }catch(err){
@@ -26,9 +74,19 @@ app.post('/users', async(req, res) => {
     }
 })
 
+app.get('/ficha', async (req, res) =>{
+    try{
+        const fichas = await User.findAll()
+
+        return res.json(fichas)
+    }catch(err){
+        console.log(err)
+        return res.status(500).json({error: 'Algo deu errado :('})
+    }
+})
+
 app.listen({port:5000}, async () => {
     console.log('Server esta hospedado em http://localhost:5000')
     await sequelize.authenticate()
     console.log('Database Connected!')
 })
-
