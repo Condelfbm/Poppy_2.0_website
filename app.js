@@ -85,6 +85,21 @@ app.get('/ficha', async (req, res) =>{
     }
 })
 
+
+app.get('/ficha/:nickname', async (req, res) =>{
+    const nickname = req.params.nickname
+    try{
+        const ficha = await User.findOne({
+            where: { nickname }
+        })
+
+        return res.json(ficha)
+    }catch(err){
+        console.log(err)
+        return res.status(500).json({error: 'Algo deu errado :('})
+    }
+})
+
 app.listen({port:5000}, async () => {
     console.log('Server esta hospedado em http://localhost:5000')
     await sequelize.authenticate()

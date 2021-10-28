@@ -3,11 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="index.css" rel="stylesheet" type="text/css">
     <title>Ficha</title>
 </head>
 <body>
-    <h1>FICHA TESTE</h1>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class='bx bxs-message-square-dots' ></i>
+                <div class="logo_name">Poppy</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        
+        <ul class="nav_list">
+            <li>
+                <i class='bx bx-search' ></i>
+                <input type="text" placeholder="Pesquisando...">
+
+            -<span class="tooltip">Pesquisa</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user' ></i>
+                    <span class="links_name">Usuário</span>
+                </a>
+                <span class="tooltip">Usuário</span>          
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog' ></i>
+                    <span class="links_name">Configurações</span>
+                </a>
+            -<span class="tooltip">Configurações</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-heart' ></i>
+                    <span class="links_name">Donation</span>
+                </a>
+            <span class="tooltip">Donation</span>
+            </li>
+        </ul>
+
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="eu.png" alt="">
+                    <div class="name_job">
+                        <div class="name">Luiz Felipe Brandão</div>
+                        <div class="job">Developer</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out' id="log_out"></i>
+            </div>
+        </div>
+
+    </div>
+    <div class="home_content">
+        <div class="text">Home Content</div>
+    </div>
+
+    <script>
+        let btn = document.querySelector("#btn")
+        let sidebar = document.querySelector(".sidebar")
+        let searchBtn = document.querySelector(".bx-search")
+
+        btn.onclick = function(){
+            sidebar.classList.toggle("active")
+        }
+        
+        searchBtn.onclick = function(){
+            sidebar.classList.toggle("active")
+        }
+    </script>
+
 </body>
 </html>
