@@ -28,39 +28,15 @@ module.exports = {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      description: {
+      forca: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      iniciativa: {
+      destreza: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      defesa: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      agilidade: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      blefe: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      conhecimento: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      cura: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      forca: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      furtividade: {
+      constituicao: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
@@ -68,31 +44,51 @@ module.exports = {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
+      sabedoria: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      carisma: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      acrobacia: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      arcanismo: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      atletismo: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      atuacao: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
       labia: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      manejo: {
+      furtividade: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      preparacao: {
+      historia: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      performace: {
+      intimidacao: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      pontaria: {
+      intuicao: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      resistencia: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      sobrevivencia: {
+      investigacao: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
@@ -100,7 +96,27 @@ module.exports = {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      vontade: {
+      medicina: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      natureza: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      percepcao: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      prestigitacao: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      religiao: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      sobrevivencia: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },

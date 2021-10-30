@@ -1,6 +1,7 @@
 const express = require('express')
 const { sequelize, User } = require('./models')
-const bodyParser = require("body-parser");
+const bodyParser = require("body-parser")
+const router = express.Router()
 
 const app = express()
 app.use(express.json())
@@ -13,65 +14,72 @@ app.get('/', (req, res) => {
     res.render("index")
 })
 
-app.post('/users', async(req, res) => {
+app.post('/', (req, res) => {
     const {
         nickname,
         characname,
         classe,
         hp,
-        description,
-        iniciativa,
-        defesa,
-        agilidade,
-        blefe,
-        conhecimento,
-        cura,
         forca,
-        furtividade,
+        destreza,
+        constituicao,
         inteligencia,
+        sabedoria,
+        carisma,
+        acrobacia,
+        arcanismo,
+        atletismo,
+        atuacao,
         labia,
-        manejo,
-        preparacao,
-        performace,
-        pontaria,
-        resistencia,
-        sobrevivencia,
+        furtividade,
+        historia,
+        intimidacao,
+        intuicao,
+        investigacao,
         animais,
-        vontade,
+        medicina,
+        natureza,
+        percepcao,
+        prestigitacao,
+        religiao,
+        sobrevivencia,
     } = req.body
 
-    try{
-        const user = await User.create({
-            nickname,
-            characname,
-            classe,
-            hp,
-            description,
-            iniciativa,
-            defesa,
-            agilidade,
-            blefe,
-            conhecimento,
-            cura,
-            forca,
-            furtividade,
-            inteligencia,
-            labia,
-            manejo,
-            preparacao,
-            performace,
-            pontaria,
-            resistencia,
-            sobrevivencia,
-            animais,
-            vontade,
-        })
 
-        return res.json(user)
-    }catch(err){
-        console.log(err)
-        return res.status(500).json(err)
-    }
+    const user = User.create({
+        nickname,
+        characname,
+        classe,
+        hp,
+        forca,
+        destreza,
+        constituicao,
+        inteligencia,
+        sabedoria,
+        carisma,
+        acrobacia,
+        arcanismo,
+        atletismo,
+        atuacao,
+        labia,
+        furtividade,
+        historia,
+        intimidacao,
+        intuicao,
+        investigacao,
+        animais,
+        medicina,
+        natureza,
+        percepcao,
+        prestigitacao,
+        religiao,
+        sobrevivencia,
+    })
+
+    res.send('<script>window.location.href="http://localhost:5000"</script>');
+
+    return res.json(user)
+
 })
 
 app.get('/ficha', async (req, res) =>{

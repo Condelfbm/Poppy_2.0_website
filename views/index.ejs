@@ -9,6 +9,155 @@
     <title>Ficha</title>
 </head>
 <body>
+    <div class="container">
+        <div class="title">Ficha do Personagem</div>
+        <form action="/" method="post">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Nome de usuário</span>
+                    <input type="text" name="nickname" placeholder="Escreva seu nome de usuário" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Nome do personagem</span>
+                    <input type="text" name="characname" placeholder="Escreva o nome do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Classe do personagem</span>
+                    <input type="text" name="classe" placeholder="Escreva a classe do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">HP</span>
+                    <input type="number" name="hp" placeholder="Defina o HP do personagem" required>
+                </div>
+            </div>
+
+            <div class="title">Atributos</div>
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Força</span>
+                    <input type="number" name="forca" placeholder="Defina a força do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Destreza</span>
+                    <input type="number" name="destreza" placeholder="Defina a destreza do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Constituição</span>
+                    <input type="number" name="constituicao" placeholder="Defina a constituição do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Inteligência</span>
+                    <input type="number" name="inteligencia" placeholder="Defina a inteligência do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Sabedoria</span>
+                    <input type="number" name="sabedoria" placeholder="Defina a sabedora do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Carisma</span>
+                    <input type="number" name="carisma" placeholder="Defina o carisma do personagem" required>
+                </div>
+            </div>
+
+            <div class="title">Perícias</div>
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Acrobacia</span>
+                    <input type="number" name="acrobacia" placeholder="Defina a acrobacia do personagem" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Arcanismo</span>
+                    <input type="number" name="arcanismo" placeholder="Defina o arcanismo do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Atletismo</span>
+                    <input type="number" name="atletismo" placeholder="Defina o atletismo do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Atuação</span>
+                    <input type="number" name="atuacao" placeholder="Defina a atuação do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Lábia</span>
+                    <input type="number" name="labia" placeholder="Defina a lábia do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Furtividade</span>
+                    <input type="number" name="furtividade" placeholder="Defina a furtividade do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">História</span>
+                    <input type="number" name="historia" placeholder="Defina a história do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Intimidação</span>
+                    <input type="number" name="intimidacao" placeholder="Defina a intimidação do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Intuição</span>
+                    <input type="number" name="intuicao" placeholder="Defina a intuição com animais do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Investigação</span>
+                    <input type="number" name="investigacao" placeholder="Defina a investigação do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Afinidade com animais</span>
+                    <input type="number" name="animais" placeholder="Defina a afinidade com animais do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Medicina</span>
+                    <input type="number" name="medicina" placeholder="Defina a medicina do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Natureza</span>
+                    <input type="number" name="natureza" placeholder="Defina a natureza do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Percepção</span>
+                    <input type="number" name="percepcao" placeholder="Defina a percepção do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Prestigitação</span>
+                    <input type="number" name="prestigitacao" placeholder="Defina a prestigitação do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Religião</span>
+                    <input type="number" name="religiao" placeholder="Defina a religião do personagem" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Sobrevivência</span>
+                    <input type="number" name="sobrevivencia" placeholder="Defina a sobrevivência do personagem" required>
+                </div>
+            </div>
+
+            <div class="gender-details">
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <input type="radio" name="gender" id="dot-3">
+                <span class="gender-title">Gênero do Personagem</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Homem</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Mulher</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Outro</span>
+                    </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Registrar" onclick="history.go(-1)">
+            </div>
+        </form>
+    </div>
+
     <div class="sidebar">
         <div class="logo_content">
             <div class="logo">
@@ -62,9 +211,12 @@
         </div>
 
     </div>
+
     <div class="home_content">
-        <div class="text">Home Content</div>
+        <div class="text">Criação de Ficha</div>
     </div>
+
+    
 
     <script>
         let btn = document.querySelector("#btn")
