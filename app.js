@@ -3,17 +3,23 @@ const { sequelize, User } = require('./models')
 const bodyParser = require("body-parser")
 const router = express.Router()
 
+//configurando o express
 const app = express()
 app.use(express.json())
-app.set("view engine", "ejs")
-app.use(express.static(__dirname + '/public'))
-app.use(bodyParser.urlencoded({ extended: false }))
+
+app.set("view engine", "ejs") //Configurando a engine utilizada
+app.use(express.static(__dirname + '/public')) //Configurando a pasta padrão de imagens
+
+//Configurando o body-parser
+app.use(bodyParser.urlencoded({ extended: false })) 
 app.use(bodyParser.json())
 
+//Definindo a rota
 app.get('/', (req, res) => {
     res.render("index")
 })
 
+//POST request para armazenar no banco de dados
 app.post('/', (req, res) => {
     const {
         nickname,
@@ -76,12 +82,13 @@ app.post('/', (req, res) => {
         sobrevivencia,
     })
 
-    res.send('<script>window.location.href="http://localhost:5000"</script>');
+    res.send('<script>window.location.href="http://localhost:5000"</script>')
 
-    return res.json(user)
+    return res.json(user) //Cadastra as informações no banco de dados
 
 })
 
+//Configurando a pesquisa por URL
 app.get('/ficha', async (req, res) =>{
     try{
         const fichas = await User.findAll()
@@ -93,7 +100,7 @@ app.get('/ficha', async (req, res) =>{
     }
 })
 
-
+//Configurando a pesquisa por URL
 app.get('/ficha/:nickname', async (req, res) =>{
     const nickname = req.params.nickname
     try{
@@ -108,6 +115,7 @@ app.get('/ficha/:nickname', async (req, res) =>{
     }
 })
 
+//Hosteando o servidor
 app.listen({port:5000}, async () => {
     console.log('Server esta hospedado em http://localhost:5000')
     await sequelize.authenticate()
