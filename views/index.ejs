@@ -15,9 +15,9 @@
     <title>Poppy2.0</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="div">
         <div class="title">Ficha do Personagem</div>
-        <form action="/" method="post">
+        <form action="/" method="post" id="form">
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">Nome de usuário</span>
@@ -176,9 +176,9 @@
         <ul class="nav_list">
             <li>
                 <i class='bx bx-search' ></i>
-                <input type="text" placeholder="Pesquisando...">
+                <input type="text" id="searchBox" placeholder="Pesquisando...">
 
-            -<span class="tooltip">Pesquisa</span>
+            <span class="tooltip">Pesquisa</span>
             </li>
             <li>
                 <a href="#">
@@ -222,7 +222,7 @@
         <div class="text">Criação de Ficha</div>
     </div>
 
-    
+
 
     <script>
         let btn = document.querySelector("#btn")
